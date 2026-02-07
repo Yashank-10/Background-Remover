@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Background Remover</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>✨ Background Remover</h1>
+        <p class="subtitle">Remove backgrounds from your images instantly</p>
+      </header>
+
+      <main>
+        <!-- Upload Section -->
+        <div class="upload-section">
+          <div class="upload-area" id="uploadArea">
+            <svg class="upload-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="17 8 12 3 7 8"></polyline>
+              <line x1="12" y1="3" x2="12" y2="15"></line>
+            </svg>
+            <h2>Drop your image here</h2>
+            <p>or click to browse</p>
+            <input type="file" id="imageInput" accept="image/*" />
+          </div>
+        </div>
+
+        <!-- Preview Section -->
+        <div class="preview-section">
+          <div class="preview-container">
+            <div class="preview-box">
+              <h3>Original</h3>
+              <img id="previewImage" src="" alt="Original image" />
+              <p id="noBefore">No image selected</p>
+            </div>
+
+            <div class="arrow">→</div>
+
+            <div class="preview-box">
+              <h3>Result</h3>
+              <img id="resultImage" src="" alt="Result image" />
+              <p id="noAfter">Processing...</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Controls -->
+        <div class="controls">
+          <button id="removeBtn" class="btn btn-primary">
+            <span id="btnText">Remove Background</span>
+            <span id="loader" class="loader"></span>
+          </button>
+          <button id="downloadBtn" class="btn btn-secondary" style="display: none;">
+            ⬇ Download Result
+          </button>
+        </div>
+
+        <!-- Info Section -->
+        <div class="info-section">
+          <div class="info-item">
+            <span class="info-icon">⚡</span>
+            <p>Fast processing</p>
+          </div>
+          <div class="info-item">
+            <span class="info-icon">🎯</span>
+            <p>High accuracy</p>
+          </div>
+          <div class="info-item">
+            <span class="info-icon">🔒</span>
+            <p>Secure & private</p>
+          </div>
+        </div>
+      </main>
+
+      <footer>
+        <p>Made with ❤ | Background Remover 2026 | Copyright Yashank</p>
+      </footer>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
