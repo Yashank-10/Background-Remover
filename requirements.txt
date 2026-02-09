@@ -1,5 +1,8 @@
-fastapi
-uvicorn
-rembg
-pillow
-onnxruntime
+fastapi==0.128.4
+uvicorn[standard]==0.30.0
+rembg==2.0.72
+pillow>=10.0.0
+onnxruntime>=1.17.0
+opencv-python-headless>=4.8.0
+numpy>=1.24.0
+scipy>=1.10.0
