@@ -70,7 +70,12 @@ removeBtn.addEventListener("click", async () => {
     const formData = new FormData();
     formData.append("file", file);
 
-    const response = await fetch("http://localhost:8000/remove-bg", {
+    // Use production URL on Render, localhost for development
+    const apiUrl = window.location.hostname === 'localhost' 
+      ? "http://localhost:8000/remove-bg"
+      : "https://your-app-name.onrender.com/remove-bg";
+
+    const response = await fetch(apiUrl, {
       method: "POST",
       body: formData,
     });
